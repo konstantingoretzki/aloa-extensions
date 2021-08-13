@@ -39,12 +39,12 @@ cp extensions.db /usr/local/P4wnP1/db/
 # drive images
 echo -e "\nSetup drive images ..."
 # FAT32
-/usr/local/P4wnP1/helper/genimg  -l "sneaky" -s 100 -o 500mb
+/usr/local/P4wnP1/helper/genimg  -l "sneaky" -s 500 -o 500mb
 mount -o loop /usr/local/P4wnP1/ums/flashdrive/500mb.bin /mnt
 cp /root/hosts/payloads/* /mnt/
 umount /mnt
 # NTFS
-dd if=/dev/zero of=/usr/local/P4wnP1/ums/flashdrive/ntfs.bin bs=1M count=100
+dd if=/dev/zero of=/usr/local/P4wnP1/ums/flashdrive/ntfs.bin bs=1M count=500
 mkfs.ntfs -Q -v -F -L sneaky /usr/local/P4wnP1/ums/flashdrive/ntfs.bin
 mount -o loop /usr/local/P4wnP1/ums/flashdrive/ntfs.bin /mnt
 cp /root/hosts/payloads/* /mnt/
