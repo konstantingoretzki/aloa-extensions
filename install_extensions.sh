@@ -5,7 +5,7 @@ echo -e "\nPlease make sure that the P4wnP1 has internet connection! \n"
 # dependencies
 echo "Installing dependencies ..."
 apt update
-apt install ntfs-3g tcpdump sqlite3
+apt install -y ntfs-3g tcpdump sqlite3
 pip3 install scapy
 
 # scripts
