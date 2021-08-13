@@ -1,13 +1,13 @@
 # ALOA extensions
-PoC extensions of the famous [P4wnP1 A.L.O.A.](https://github.com/RoganDawes/P4wnP1_aloa) framework by MaMe82 for the Raspberry Pi Zero W(H). The main functionality of this extension is a basic operating system and keyboard layout detection by analyzing DHCP packets and "brute-forcing" (power)shell commands. Besides helper scripts are provided that allow root / admin right detection, easy binary execution (incl. commandline arguments) and file extraction. An example for stealing the Firefox cookies.db using a golang executable and a HIDScript is given.
+PoC extensions for the famous [P4wnP1 A.L.O.A.](https://github.com/RoganDawes/P4wnP1_aloa) framework by MaMe82 for the Raspberry Pi Zero W(H). The main functionality of this extension is a basic operating system and keyboard layout detection by analyzing DHCP packets and "brute-forcing" (power)shell commands. Besides helper scripts are provided that allow root / admin right detection, easy binary execution (incl. command line arguments) and file extraction. An example for stealing the Firefox cookies.db using a golang executable and a HIDScript is given.
 
 ## Installation
-- Simple way: just download the `aloa-extensions.img` image (needs SD card with at least 6 GB) and flash using `dd` or [balenaEtcher](https://www.balena.io/etcher/)
+- Simple way: just download the [image](https://github.com/konstantingoretzki/aloa-extensions/releases/) (needs SD card with at least 6 GB) and flash using `dd` or [balenaEtcher](https://www.balena.io/etcher/)
 - Manual mode:
     1. Normally [flash](https://github.com/RoganDawes/P4wnP1_aloa#0-how-to-install) your P4wnP1
     2. SSH into to device: `ssh root@172.24.0.1` (WLAN AP) or `ssh root@172.16.0.1` (USB)
 	3. Connect your P4wnP1 to the internet (see [internet sharing](#internet-sharing))
-	4. Clone the repo (`git clone https://github.com/konstantingoretzki/aloa-extensions`) and execute `install-extensions.sh` (`cd aloa-extensions && chmod +x install-extensions.sh && ./install-extensions.sh`)
+	4. Clone the repo (`git clone https://github.com/konstantingoretzki/aloa-extensions`) and execute `install_extensions.sh` (`cd aloa-extensions && chmod +x install_extensions.sh && ./install_extensions.sh`)
 	5. Customize `trigger-usb-connect.sh` according to your wishes (see [settings](#settings))
 	6. Reboot the device --> `reboot`
 
